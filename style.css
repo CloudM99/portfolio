@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* couper les mots longs */
+    word-break: break-word; /* couper les mots longs */
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url('img/background.png');
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+p {
+    text-align: justify;
+    padding: 10px;
+    line-height: 1.8;
+    text-indent: 1.5em; /* Valeur d'indentation, ajustable */
+    margin-bottom: 0.5em; /* Pour espacer les paragraphes */
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+}
+
+
+.btn {
+    background-color: #2a692f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #174D16;
+}
+
+
+/* Toutes les pages */
+
+h1 {
+    margin : 10px;
+    text-align: center;
+    color : #dddddd;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: left ;
+    width: 100%;
+}
+
+h3 {
+    padding-bottom: 10px;
+    color:#32913a;
+}
+
+
+.projet, .veille, .propos, .contact {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Prend toute la largeur disponible */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.projet-box,.a-propos-box, .veille-box, .contact-box {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    padding-bottom: 30px;
+    gap: 20px; /* Ajoute un espace entre les projets */
+}
+
+
+
+
+/* A propos tableau */
+
+.enseignement {
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+td {
+    color: #1e1e1e;
+}
+
+.matière {
+    width: 200px;
+}
+
+.volume {
+    width: 100px;
+}
+
+
+/* Home */
+
+header h1 {
+    color: #32913a;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    color: #32913a;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #1B5E20;
+}
+
+.principal {
+    background: linear-gradient(to right, #2a4729, #333, #181818);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.principal h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.principal h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.service-box {
+    display: flex;
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.service {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services h2 {
+    color: #bbb;
+    text-align: center;
+}
+
+.services h3 {
+    color: #32913a;
+    text-align: left;
+}
+
+.service a {
+    display: block; /* L'élément <a> doit prendre toute la taille de son parent .service */
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 10px;
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #bbb;
+    text-align: center;
+}
+
+
