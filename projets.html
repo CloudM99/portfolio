@@ -51,25 +51,39 @@
             <h1>Mon Projet Professionnel</h1>
             <div class="projet">
                 <h2 id="suseta">Suseta</h2>
-                <h3>Formatage de fichier</h3>
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                a
-                a
-                a
-                a
-                a
-                aa
+                <p>
+                    Dans le cadre de mon alternance, j'ai travaillé sur des applications de gestion des mesures conservatoires.
+                    Mon manager m'a confié la mission de créer un nouvel outil reprenant les fonctionnalités d'un outil existant, dont le serveur va être décommissionné.
+                    Ce site était utilisé par une équipe d'une dizaine de personnes à travers la France pour formater les données nécessaires à la gestion des mesures conservatoires.
 
-                a
-                a
-                aa
-
-                a
-                a
-                a
-                a</p>
+                </p>
+                <p>
+                    Les mesures conservatoires sont appliquées lorsque le client n'a pas payé ses factures pour des services donnés, entraînant la suspension de ces services.
+                    Une fois le règlement effectué, les services sont rétablis.
+                    C'est en m'inspirant de ces mécanismes que j'ai nommé l'outil "Suseta", qui reprend "Sus" pour "Suspension" et "eta" pour "Rétablissement".
+                </p>
+                <p>
+                    Pour des raisons de confidentialité, je ne peux pas partager le code source de l'application.
+                    Cependant, je peux vous partager un aperçu de Suseta.
+                    Il y a 4 pages accessibles aux utilisateurs, et une page d'administration.
+                </p>
+                <p>
+                    La première page "Traitement par service" permet à l'utilisateur de choisir l'action à effectuer, le service concerné et de renseigner la référence nécessaire.
+                </p>
+                <p>
+                    La deuxième page "Consultation des données" permet de consulter les références qui ont étés renseignés et donc stockés dans une table temporaire.
+                    L'utilisateur peut également rentrer une référence présente dans cette liste pour annuler le traitement.
+                </p>
+                <p>
+                    La troisième page "Génération des fichiers" permet de générer les fichiers nécessaires au traitement des mesures. Le traitement diffère selon le service et l'action choisie.
+                    Les fichiers générés devront ensuite être déposés sur les applications spécifiques aux services.
+                    Lorsque l'utilisateur clique sur le bouton "Générer", il est redirigé vers une page de confirmation.
+                    La table temporaire est vidée et les mesures sont historisées dans une autre table.
+                </p>
+                <p>
+                    La quatrième page "Historique" permet de consulter les mesures qui ont été traitées.
+                    Les mesures sont affichés par fichier et par date de traitement.
+                </p>
             </div>
         </div>
     </div>
