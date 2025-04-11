@@ -126,27 +126,23 @@ h3 {
 }
 
 .description {
-    display: none; /* Le texte est masqué par défaut */
+    opacity: 0; /* Le texte est masqué par défaut */
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
     padding: 20px;
-    background: #292929;
     box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    z-index: 10; /* Assurez-vous que le texte est au-dessus des logos */
 }
 
 .env_dev:hover .logos {
-    display: none; /* Les logos disparaissent au survol */
+    opacity: 0; /* Les logos disparaissent au survol */
 }
 
 .env_dev:hover .description {
-    display: flex; /* Le texte apparaît au survol */
+    opacity: 1; /* Le texte apparaît au survol */
 }
 
 .projet-box,.a-propos-box, .veille-box, .contact-box {
