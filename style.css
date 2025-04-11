@@ -109,7 +109,7 @@ h3 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.projet {
+.env_dev {
     position: relative;
     overflow: hidden;
 }
@@ -134,11 +134,11 @@ h3 {
     box-sizing: border-box;
 }
 
-.projet:hover .logos {
+.env_dev:hover .logos {
     opacity: 0; /* Les logos disparaissent au survol */
 }
 
-.projet:hover .description {
+.env_dev:hover .description {
     opacity: 1; /* Le texte apparaît au survol */
 }
 
