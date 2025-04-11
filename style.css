@@ -29,6 +29,26 @@ h1, h2 {
     margin: 0 auto;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+a:hover {
+    color: #2a692f;
+    border-bottom: 2px solid #2a692f;
+}
+
+a:active {
+    color: #2a692f;
+}
+
+a:visited {
+    color: #174D16;
+}
+
 p {
     text-align: justify;
     padding: 10px;
@@ -88,6 +108,40 @@ h3 {
     width: 100%; /* Prend toute la largeur disponible */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.projet {
+    position: relative;
+    overflow: hidden;
+}
+
+.logos, .description {
+    transition: opacity 0.3s ease;
+}
+
+.logos {
+    opacity: 1; /* Les logos sont visibles par défaut */
+}
+
+.description {
+    opacity: 0; /* Le texte est masqué par défaut */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project:hover .logos {
+    opacity: 0; /* Les logos disparaissent au survol */
+}
+
+.project:hover .description {
+    opacity: 1; /* Le texte apparaît au survol */
+}
+
 .projet-box,.a-propos-box, .veille-box, .contact-box {
     display: flex;
     flex-direction: column; /* Aligne les éléments verticalement */
