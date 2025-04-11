@@ -134,11 +134,11 @@ h3 {
     box-sizing: border-box;
 }
 
-.project:hover .logos {
+.projet:hover .logos {
     opacity: 0; /* Les logos disparaissent au survol */
 }
 
-.project:hover .description {
+.projet:hover .description {
     opacity: 1; /* Le texte apparaît au survol */
 }
 
