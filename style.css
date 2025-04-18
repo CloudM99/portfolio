@@ -103,47 +103,63 @@ h3 {
 
 .projet, .veille, .propos, .contact {
     background-color: #292929;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     width: 100%; /* Prend toute la largeur disponible */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.env_dev {
+
+.tech {
     position: relative;
     overflow: hidden;
-}
-
-.logos, .description {
-    transition: opacity 0.3s ease;
-}
+    height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    transition: height 0.3s ease; /* Transition pour la hauteur */
+  }
 
 .logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Assurez-vous que les logos prennent toute la hauteur */
+    height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    transition: opacity 0.3s ease;
+}
+
+.logo {
+    width: 150px; /* Ajustez la largeur selon vos besoins */
+    height: auto;
+    margin: 0 100px; /* Espace entre les logos */
 }
 
 .description {
-    display: none; /* Le texte est masqué par défaut */
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
-    padding: 20px;
+    width: 100%;
+    height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    overflow: auto; /* Permet le défilement si le contenu dépasse */
+    background: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Empêche les interactions avec la description */
     box-sizing: border-box;
+    text-align: center; /* Centre le texte */
 }
 
-.env_dev:hover .logos {
-    display: none;/* Les logos disparaissent au survol */
+.tech:hover .logos {
+    opacity: 0;
+    height: auto; /* Ajuste la hauteur pour contenir tout le texte */
 }
 
-.env_dev:hover .description {
-    display: flex; /* Le texte apparaît au survol */
+.tech:hover .description {
+    height: auto;
+    opacity: 1;
+    pointer-events: auto; /* Permet les interactions avec la description */
 }
+
 
 .projet-box,.a-propos-box, .veille-box, .contact-box {
     display: flex;
