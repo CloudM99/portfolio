@@ -100,29 +100,27 @@ h3 {
     color:#32913a;
 }
 
+/* Ajoute ou modifie ces styles dans ton fichier CSS */
 
-.projet, .veille, .propos, .contact {
-    background-color: #292929;
-    padding: 40px;
-    border-radius: 10px;
-    width: 100%; /* Prend toute la largeur disponible */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
+/* Ajoute ou modifie ces styles dans ton fichier CSS */
 
 .tech {
     position: relative;
     overflow: hidden;
-    height: auto; /* Hauteur automatique pour s'adapter au contenu */
-    transition: height 0.3s ease; /* Transition pour la hauteur */
+    min-height: auto; /* Utilise min-height pour permettre l'extension */
+    transition: min-height 0.3s ease; /* Transition pour la hauteur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    min-height: auto; /* Utilise min-height pour permettre l'extension */
     transition: opacity 0.3s ease;
+    width: 100%; /* Assure que les logos prennent toute la largeur disponible */
 }
 
 .logo {
@@ -135,14 +133,12 @@ h3 {
 }
 
 .description {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative; /* Change à relative pour permettre l'adaptation */
     width: 100%;
-    height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    min-height: auto; /* Utilise min-height pour permettre l'extension */
     overflow: auto; /* Permet le défilement si le contenu dépasse */
     background: #292929;
-    display: flex;
+    display: none; /* Masque la description par défaut */
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -153,23 +149,33 @@ h3 {
 }
 
 .tech:hover .logos {
-    opacity: 0;
-    height: auto; /* Ajuste la hauteur pour contenir tout le texte */
+    display: none; /* Masque les logos au survol */
 }
 
 .tech:hover .description {
-    height: auto;
+    display: block; /* Affiche la description au survol */
     opacity: 1;
     pointer-events: auto; /* Permet les interactions avec la description */
 }
 
-
-.projet-box,.a-propos-box, .veille-box, .contact-box {
+.projet-box, .a-propos-box, .veille-box, .contact-box {
     display: flex;
     flex-direction: column; /* Aligne les éléments verticalement */
     padding-bottom: 30px;
     gap: 20px; /* Ajoute un espace entre les projets */
 }
+
+.projet, .veille, .propos, .contact {
+    background-color: #292929;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%; /* Prend toute la largeur disponible */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+}
+
+
 
 .logo-propos {
     width: 100%;
@@ -346,5 +352,166 @@ footer p {
     color: #bbb;
     text-align: center;
 }
+
+
+/* Ajoute ces media queries à la fin de ton fichier CSS */
+
+/* Pour les tablettes et les écrans plus petits */
+@media (max-width: 768px) {
+    .container {
+        width: 96%;
+        padding: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .principal h1 {
+        font-size: 1.6rem;
+    }
+
+    .service-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px; /* Réduit l'espace entre les projets */
+    }
+
+    .service {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .logo-propos img {
+        width: 80px;
+        margin-right: 10px;
+    }
+
+    .enseignement table {
+        font-size: 0.7rem;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap; /* Empêche le texte de se couper et force le défilement horizontal */
+    }
+
+    .enseignement th, .enseignement td {
+        padding: 8px; /* Réduit le padding des cellules */
+    }
+
+    .contact-info {
+        margin-bottom: 10px;
+    }
+
+    #maps iframe {
+        height: 300px;
+    }
+
+    h1, h2, h3, p {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Pour les téléphones mobiles et les écrans plus petits */
+@media (max-width: 480px) {
+    .container {
+        width: 96%;
+        padding: 5px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul li {
+        margin-bottom: 5px;
+    }
+
+    .principal h1 {
+        font-size: 1.4rem;
+    }
+
+    .service-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; /* Réduit encore plus l'espace entre les projets */
+    }
+
+    .service {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .logo-propos img {
+        width: 60px;
+        margin-right: 5px;
+    }
+
+    .enseignement table {
+        font-size: 0.6rem;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+        white-space: nowrap; /* Empêche le texte de se couper et force le défilement horizontal */
+    }
+
+    .enseignement th, .enseignement td {
+        padding: 6px; /* Réduit encore plus le padding des cellules */
+    }
+
+    .contact-info {
+        margin-bottom: 5px;
+    }
+
+    #maps iframe {
+        height: 200px;
+    }
+
+    h1, h2, h3, p {
+        margin: 5px 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 0.8rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+}
+
+
 
 
