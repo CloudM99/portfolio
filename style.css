@@ -115,7 +115,7 @@ h3 {
     overflow: hidden;
     height: auto; /* Hauteur automatique pour s'adapter au contenu */
     transition: height 0.3s ease; /* Transition pour la hauteur */
-  }
+}
 
 .logos {
     display: flex;
@@ -126,6 +126,9 @@ h3 {
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px; /* Ajustez la largeur selon vos besoins */
     height: auto;
     margin: 0 100px; /* Espace entre les logos */
@@ -168,7 +171,34 @@ h3 {
     gap: 20px; /* Ajoute un espace entre les projets */
 }
 
+.logo-propos {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-color: #292929;
+    padding: 40px;
+    border-radius: 10px;
+    display: flex; /* Utilise flexbox pour le centrage */
+    align-items: center; /* Centre verticalement les éléments */
+}
 
+.logo-slider-track {
+    display: inline-block;
+    align-items: center;
+}
+
+.logo-propos img {
+    width: 125px; /* Ajustez la taille selon vos besoins */
+    height: auto; transition: transform 0.2s;
+    margin-right: 75px;
+    display: inline-block; /* Assure que les images sont traitées comme des éléments en ligne */
+    vertical-align: middle; /* Centre verticalement les images */
+}
+
+.logo-propos img:hover {
+    transform: scale(1.1);
+}
 
 
 /* A propos tableau */
